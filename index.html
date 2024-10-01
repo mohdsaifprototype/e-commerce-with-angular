@@ -1,124 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ap designer</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet">
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/card-controller.js" defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      defer></script>
+      defer
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer></script>
-    <script src="script.js"></script>
+      defer
+    ></script>
   </head>
   <body>
     <div class="container-fluid bg-black text-white">
       <div
-        class="container-xxl d-flex showAd  justify-content-between  align-items-center">
+        class="container-xxl d-flex showAd justify-content-between align-items-center"
+      >
         <div class="d-flex text-center">
-          <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF
-            50%!</span>
-          <span class="ms-2  border-0  "><u>ShowNow !</u></span>
+          <span
+            >Summer Sale For All Swim Suits And Free Express Delivery - OFF
+            50%!</span
+          >
+          <span class="ms-2 border-0"><u>ShowNow !</u></span>
         </div>
-        <span class>English <i class="bi  bi-chevron-compact-down"></i> </span>
+        <span class>English <i class="bi bi-chevron-compact-down"></i> </span>
       </div>
     </div>
-    <header class="sticky-top container-xxl ">
-      <nav class="navbar navbar-expand-lg navbar-light "
-        aria-label="Offcanvas navbar large" id="dhara-plants-nav">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-            <img class="brand-logo-img" src="assets/img/logo1.png"
-              alt="brands-logo" height="80">
-          </a>
-          <button class="navbar-toggler py-2"
-            type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#myOffcanvasNavbar"
-            aria-controls="myOffcanvasNavbar">
-            <i class="bi bi-list"></i>
-          </button>
-          <div class="sidebar offcanvas offcanvas-start   magic-bg"
-            tabindex="-1"
-            id="myOffcanvasNavbar" aria-labelledby="myOffcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="myOffcanvasNavbarLabel">Menu</h5>
-              <button type="button" class="btn-close btn-close-black"
-                data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-
-            <div class="offcanvas-body align-items-md-center">
-              <ul class="navbar-nav  justify-content-center flex-grow-1 pe-3">
-                <li class="nav-item d-sm-none d-block">
-                  <button type="button"
-                    class="btn  ms-md-3 me-md-2 ctas cta-cart">
-                    <i class="bi bi-list"></i>
-                  </button>
-                </li>
-                <li class="nav-item p-3 icons ">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-
-                <li class="nav-item p-3 icons">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>
-                <li class="nav-item p-3 icons">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item p-3 icons">
-                  <a class="nav-link" href="#">Sign up</a>
-                </li>
-              </ul>
-
-              <div class="search-group d-flex align-items-baseline">
-                <form class="input-group d-flex mt-3 mt-lg-0" role="search">
-                  <input class="form-control" type="search"
-                    placeholder="What are you looking for?"
-                    aria-label="Search">
-                  <button class="btn btn-outline-dark" type="submit"
-                    title="search">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </form>
-                <button type="button"
-                  class="btn  rounded-pill ms-md-2  d-none d-sm-block">
-                  <i class="fa-regular icons fa-heart"></i>
-                </button>
-                <button type="button"
-                  class="btn  rounded-pill ms-md-1 me-md-2 d-none d-sm-block">
-                  <i class="bi icons bi-cart3"></i>
-                </button>
-                <a href="#"
-                  class="btn  rounded-circle d-none d-sm-block"
-                  title="user-login"><i
-                    class="fa-regular icons fa-user"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <div class="container-fluid  "><span class="lines rounded"></span></div>
+    <div class="header"></div>
+    <div class="container-fluid"><span class="lines rounded"></span></div>
     <section class="container-xxl">
       <div class="row">
-        <div class="col-2 d-flex flex-column gap-2 mt-4">
-          <span class="d-flex justify-content-between ">Woman's Fashion <i
-              class="bi  bi-chevron-compact-right"></i> </span>
-          <span class="d-flex justify-content-between">Men's Fashion <i
-              class="bi  bi-chevron-compact-right"></i> </span>
+        <div class="col-2 d-none d-lg-flex flex-column gap-2 mt-4">
+          <span class="d-flex justify-content-between"
+            >Woman's Fashion <i class="bi bi-chevron-compact-right"></i>
+          </span>
+          <span class="d-flex justify-content-between"
+            >Men's Fashion <i class="bi bi-chevron-compact-right"></i>
+          </span>
           <span>Electronics</span>
           <span>Home &amp Lifestyle</span>
           <span>Medicine</span>
@@ -128,22 +71,21 @@
           <span>Groceries &amp Pets</span>
           <span>Health &amp Beauty</span>
         </div>
-        <div class=" col-1"><span class="line rounded"></span></div>
+        <div class="col-1 d-none d-md-block">
+          <span class="line rounded"></span>
+        </div>
         <div class="col-9 mt-4 ms-4">
           <div class="heroslider swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-
-              </div>
+              <div class="swiper-slide"></div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <section class="container-xxl mt-5 mb-5">
-      <div class="d-flex align-items-start ">
+    <section class="container-xxl mt-5 gap-bottom">
+      <div class="d-flex align-items-start">
         <span class="beforeSectionHeading"></span>
         <span class="beforeSectionSubHeading">Today's</span>
       </div>
@@ -153,218 +95,237 @@
         </div>
         <div class="col-6"></div>
       </div>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-5 mt-2 mb-5 ">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 mt-2 mb-5">
         <div class="col">
-          <div class="card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/g92-2-500x500 1.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/g92-2-500x500 1.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-between card-icons ">
-                <div class="discount">
-                  -40%
-                </div>
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png"
-                        alt></a></div>
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/view-icon.png"
-                        alt></a></div>
+                class="position-absolute top-0 d-flex justify-content-between card-icons"
+              >
+                <div class="discount">-40%</div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/view-icon.png" alt /></a>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">HAVIT HV-G92 Gamepad</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">HAVIT HV-G92 Gamepad</span>
               <div>
                 <span class="price">$260</span>
                 <span class="mrpPrice ms-1"><del>$160</del></span>
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-half"></i></span>
-                <span style="color: #808080;">(88)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-half"></i
+                ></span>
+                <span class="rate-no-color">(88)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/ak-900-01-500x500 1.png"
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/ak-900-01-500x500 1.png"
                   class="card-img-top"
-                  alt="...">
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-between card-icons ">
-                <div class="discount">
-                  -35%
-                </div>
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png"
-                        alt></a></div>
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/view-icon.png"
-                        alt></a></div>
+                class="position-absolute top-0 d-flex justify-content-between card-icons"
+              >
+                <div class="discount">-35%</div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/view-icon.png" alt /></a>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">AK-900 Wired Keyboard</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">AK-900 Wired Keyboard</span>
               <div>
                 <span class="price">$960</span>
                 <span class="mrpPrice ms-1"><del>$1160</del></span>
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-half"></i></span>
-                <span style="color: #808080;">(88)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-half"></i
+                ></span>
+                <span class="rate-no-color">(88)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/monitor.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/monitor.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-between card-icons ">
-                <div class="discount">
-                  -30%
-                </div>
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png"
-                        alt></a></div>
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/view-icon.png"
-                        alt></a></div>
+                class="position-absolute top-0 d-flex justify-content-between card-icons"
+              >
+                <div class="discount">-30%</div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/view-icon.png" alt /></a>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">IPS LCD Gaming Monitor</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">IPS LCD Gaming Monitor</span>
               <div>
                 <span class="price">$370</span>
                 <span class="mrpPrice ms-1"><del>$400</del></span>
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-half"></i></span>
-                <span style="color: #808080;">(88)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-half"></i
+                ></span>
+                <span class="rate-no-color">(88)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/chair.png"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img src="assets/img/chair.png" alt="..." />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-between card-icons ">
-                <div class="discount">
-                  -25%
-                </div>
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png"
-                        alt></a></div>
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/view-icon.png"
-                        alt></a></div>
+                class="position-absolute top-0 d-flex justify-content-between card-icons"
+              >
+                <div class="discount">-25%</div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/view-icon.png" alt /></a>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">S-Series Comfort Chair </span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">S-Series Comfort Chair </span>
               <div>
                 <span class="price">$325</span>
                 <span class="mrpPrice ms-1"><del>$400</del></span>
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-half"></i></span>
-                <span style="color: #808080;">(88)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-half"></i
+                ></span>
+                <span class="rate-no-color">(88)</span>
               </div>
             </div>
           </div>
         </div>
-
       </div>
       <div class="text-center mb-5">
-        <a href="#" class="viewMore">
-          view All products
-        </a>
+        <a href="#" class="viewMore"> view All products </a>
       </div>
     </section>
-    <section class="container-xxl mt-5">
-      <div class="d-flex align-items-start ">
+    <div class="container-xxl gap-bottom">
+      <span class="lines rounded"></span>
+    </div>
+    <section class="container-xxl gap-bottom">
+      <div class="d-flex align-items-start">
         <span class="beforeSectionHeading"></span>
         <span class="beforeSectionSubHeading">Categories</span>
       </div>
@@ -372,11 +333,52 @@
         <div class="col-6">
           <span class="display-6 fw-semibold">Browse By Category</span>
         </div>
-        <div class="col-6"></div>
+       <div class="row mt-4  row-cols-2 row-cols-sm-4 row-cols-lg-6 
+        ">
+        <div class="col mb-3 mb-md-0 ">
+          <div class="category-box d-flex gap-3 flex-column justify-content-center align-items-center">
+            <span><img src="assets/img/Category-CellPhone.png" alt=""></span>
+            <span>Phones</span>
+          </div>
+        </div>
+        <div class="col mb-3 mb-md-0 ">
+          <div class="category-box d-flex gap-3 flex-column justify-content-center align-items-center">
+            <span><img src="assets/img/Category-Computer.png" alt=""></span>
+            <span>Computers</span>
+          </div>
+        </div>
+        <div class="col mb-3 mb-md-0 ">
+          <div class="category-box d-flex gap-3 flex-column justify-content-center align-items-center">
+            <span><img src="assets/img/Category-SmartWatch.png" alt=""></span>
+            <span>Smart Watch</span>
+          </div>
+        </div>
+        <div class="col mb-3 mb-md-0 ">
+          <div class="category-box d-flex gap-3 flex-column justify-content-center align-items-center">
+            <span><img src="assets/img/Category-camera.png" alt=""></span>
+            <span>camera</span>
+          </div>
+        </div>
+        <div class="col ">
+          <div class="category-box d-flex gap-3 flex-column justify-content-center align-items-center">
+            <span><img src="assets/img/Category-Headphone.png" alt=""></span>
+            <span>Headphone</span>
+          </div>
+        </div>
+        <div class="col ">
+          <div class="category-box d-flex gap-3 flex-column justify-content-center align-items-center">
+            <span><img src="assets/img/Category-Gamepad.png" alt=""></span>
+            <span>Gaming</span>
+          </div>
+        </div>
+       </div>
       </div>
     </section>
-    <section class="container-xxl mt-5">
-      <div class="d-flex align-items-start ">
+    <div class="container-xxl gap-bottom">
+      <span class="lines rounded"></span>
+    </div>
+    <section class="container-xxl gap-bottom">
+      <div class="d-flex align-items-start">
         <span class="beforeSectionHeading"></span>
         <span class="beforeSectionSubHeading">This Month </span>
       </div>
@@ -386,209 +388,244 @@
         </div>
         <div class="col-6"></div>
       </div>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-5 mt-2">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 mt-2">
         <div class="col">
-          <div class="card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/north coat.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/north coat.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
           -40%
         </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">HAVIT HV-G92 Gamepad</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">HAVIT HV-G92 Gamepad</span>
               <div>
                 <span class="price">$260</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(60)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(60)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/Gucci-Savoy-medium-duffle-bag.png"
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/Gucci-Savoy-medium-duffle-bag.png"
                   class="card-img-top"
-                  alt="...">
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
           -40%
         </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">Gucci duffle bag</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">Gucci duffle bag</span>
               <div>
                 <span class="price">$960</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(60)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(60)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/gammaxx-rgb.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/gammaxx-rgb.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
           -40%
         </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">RGB liquid CPU Cooler</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">RGB liquid CPU Cooler</span>
               <div>
                 <span class="price">$160</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(60)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(60)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class="card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/book shelf.png" width="40px"
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/book shelf.png"
+                  width="40px"
                   class="card-img-top"
-                  alt="...">
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
           -40%
         </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">Small BookSelf</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">Small BookSelf</span>
               <div>
                 <span class="price">$360</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(60)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(60)</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="container-xxl mt-5">
-      <div class="d-flex align-items-start ">
+    <section class="container-xxl gap-bottom">
+      <div class="d-flex align-items-start">
         <span class="beforeSectionHeading"></span>
         <span class="beforeSectionSubHeading">Ours Products</span>
       </div>
@@ -598,497 +635,542 @@
         </div>
         <div class="col-6"></div>
       </div>
-      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-5 mb-5 mt-2 ">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 mb-5 mt-3">
         <div class="col">
-          <div class=" card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/Frame 604.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/Frame 604.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
               -40%
             </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">Breed Dry Dog Food</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">Breed Dry Dog Food</span>
               <div>
                 <span class="price">$100</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(60)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(60)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class=" card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/camera.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/camera.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
               -40%
             </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">CANON EOS DSLR Camera</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">CANON EOS DSLR Camera</span>
               <div>
                 <span class="price">$160</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(60)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(60)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class=" card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/laptop.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/laptop.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
               -40%
             </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">ASUS FHD Gaming Laptop</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">ASUS FHD Gaming Laptop</span>
               <div>
                 <span class="price">$700</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(60)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(60)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class=" card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/curology.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/curology.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
               -40%
             </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">Curology Product Set </span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">Curology Product Set </span>
               <div>
                 <span class="price">$500</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(65)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(65)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class=" card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/Car Kids.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/Car Kids.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-between card-icons ">
-                <div class="new">
-                  New
-                </div>
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                class="position-absolute top-0 d-flex justify-content-between card-icons"
+              >
+                <div class="new">New</div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">Kids Electric Car</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">Kids Electric Car</span>
               <div>
                 <span class="price">$960</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(70)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(70)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class=" card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/shoes.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/shoes.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
               -40%
             </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">Jr. Zoom Soccer Cleats</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">Jr. Zoom Soccer Cleats</span>
               <div>
                 <span class="price">$1160</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(80)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(80)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class=" card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/gamepad black.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/gamepad black.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-between card-icons ">
-                <div class="new">
-                  New
-                </div>
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                class="position-absolute top-0 d-flex justify-content-between card-icons"
+              >
+                <div class="new">New</div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">GP11 Shooter USB Gamepad</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">GP11 Shooter USB Gamepad</span>
               <div>
                 <span class="price">$660</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #808080;">(60)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rate-no-color">(60)</span>
               </div>
             </div>
           </div>
         </div>
         <div class="col">
-          <div class=" card border-0" style="width: 270px; height: 350px;">
+          <div class="card border-0">
             <div
-              class="position-relative d-flex rounded-3 align-items-center justify-content-center overflow-hidden "
-              style="width: 270px; height: 250px; background-color:#f5f5f5 ;">
-              <div class="d-flex justify-content-center align-items-center"
-                style="width: 172px; height: 152px;">
-                <img src="assets/img/jacket.png" class="card-img-top"
-                  alt="...">
+              class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden"
+            >
+              <div
+                class="d-flex card-inner-img-section justify-content-center align-items-center"
+              >
+                <img
+                  src="assets/img/jacket.png"
+                  class="card-img-top"
+                  alt="..."
+                />
               </div>
               <div
-                class="position-absolute top-0 d-flex justify-content-end card-icons ">
+                class="position-absolute top-0 d-flex justify-content-end card-icons"
+              >
                 <!-- <div class="discount">
               -40%
             </div> -->
-                <div class="viewAndwhislist d-flex flex-column gap-2 ">
-                  <div class="icon-circle"><a href="#"><img
-                        src="assets/img/heart-icon.png" alt></a></div>
-                  <div class="icon-circle"><span><img
-                        src="assets/img/view-icon.png"
-                        alt></span></div>
+                <div class="viewAndwhislist d-flex flex-column gap-2">
+                  <div class="icon-circle">
+                    <a href="#"><img src="assets/img/heart-icon.png" alt /></a>
+                  </div>
+                  <div class="icon-circle">
+                    <span><img src="assets/img/view-icon.png" alt /></span>
+                  </div>
                 </div>
               </div>
-              <div
-                class="adToCart bottom-0  rounded-2">
-                Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
             </div>
-            <div class="card-body border-0  d-flex flex-column">
-              <span class="card-title ">Quilted Satin Jacket</span>
+            <div class="card-body border-0 d-flex flex-column">
+              <span class="card-title">Quilted Satin Jacket</span>
               <div>
                 <span class="price">$660</span>
                 <!-- <span class="mrpPrice ms-1"><del>$160</del></span> -->
               </div>
               <div>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-fill"></i></span>
-                <span style="color: #FFAD33;"><i
-                    class="bi bi-star-half"></i></span>
-                <span style="color: #808080;">(20)</span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-fill"></i
+                ></span>
+                <span class="rating-color"
+                  ><i class="bi bi-star-half"></i
+                ></span>
+                <span class="rate-no-color">(20)</span>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="text-center mb-5">
-        <a href="#" class="viewMore">
-          view All products
-        </a>
+        <a href="#" class="viewMore"> view All products </a>
       </div>
     </section>
-    <section class="container-xxl mt-5">
-      <div class="d-flex align-items-start ">
+    <section class="container-xxl gap-bottom">
+      <div class="d-flex align-items-start">
         <span class="beforeSectionHeading"></span>
         <span class="beforeSectionSubHeading">Featured</span>
       </div>
-      <div class="row">
-        <div class="col-6">
-          <span class="display-6 fw-semibold">New Products</span>
+      <div>
+        <span class="display-6 fw-semibold">New Arrival</span>
+      </div>
+      <div class="mt-3 mb-5">
+        <div class="row d-flex justify-content-lg-between">
+          <div class="col-12 col-md-6">
+            <div class="card lastSection">
+              <img src="assets/img/ps-5.png" alt="" />
+              <div
+                class="card-img-overlay m-1 m-md-3 card-body d-flex flex-column justify-content-end text-light lh-1"
+              >
+                <h5>PlayStation 5</h5>
+                <p>Black and White version of the PS5 coming out on sale.</p>
+                <a href="#" class="text-light"><u>Shop Now</u></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-6 d-flex flex-column justify-content-lg-between"
+          >
+            <div class="row mx-1 mt-3 mt-md-0">
+              <div class="card bg-black lastSection">
+                <img src="assets/img/attractive-woman.png" alt="" />
+                <div
+                  class="card-img-overlay m-1 m-md-3 card-body d-flex flex-column justify-content-end text-light lh-1"
+                >
+                  <h5 class="">Womens Collection</h5>
+                  <p class="d-none d-sm-block">
+                    Featured woman collections that give you another vibe.
+                  </p>
+                  <a href="#" class="text-light"><u>Shop Now</u></a>
+                </div>
+              </div>
+            </div>
+            <div class="row gx-2 mt-3">
+              <div class="col-6">
+                <div class="card lastSection">
+                  <img src="assets/img/amazon speakers.png" alt="" />
+                  <div
+                    class="card-img-overlay m-1 m-md-3 card-body d-flex flex-column justify-content-end text-light lh-1"
+                  >
+                    <h5>Speakers</h5>
+                    <p>Amazon wirless speaker</p>
+                    <a href="#" class="text-light"><u>Shop Now</u></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card lastSection">
+                  <img src="assets/img/perfume.png" alt="" />
+                  <div
+                    class="card-img-overlay m-1 m-md-3 card-body d-flex flex-column justify-content-end text-light lh-1"
+                  >
+                    <h5>Perfume</h5>
+                    <p>GUCCI INTENSE OUD EDP</p>
+                    <a href="#" class="text-light"><u>Shop Now</u></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-6"></div>
       </div>
     </section>
 
-    <footer class="container-fluid bg-black">
-      <div class="container-xxl py-5">
-        <div class="row">
-          <div class="col-md-3  mb-3">
-            <form>
-              <h5 class="text-light">Ap studios</h5>
-              <h5 class="text-secondary">Subscribe</h5>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden">Email
-                  address</label>
-                <input id="newsletter1" type="text" class="form-control"
-                  placeholder="Email address">
-
-              </div>
-            </form>
-          </div>
-          <div class="col-6 col-md-3 mb-3">
-            <h5 class="text-light">Support</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">111, Govindpuri
-                  kalkaji</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">exclusive@gmail.com</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">+91
-                  8872446878</a></li>
-
-            </ul>
-          </div>
-
-          <div class="col-6 col-md-3 mb-3">
-            <h5 class="text-light">Account</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">My Acccount</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">Login/Register</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">Cart</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">Whislist</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">Shop</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-3 mb-3">
-            <h5 class="text-light">Quick link</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">Privacy policy</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">Terms of use</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#"
-                  class="nav-link p-0 text-secondary">Contacts</a></li>
-
-            </ul>
-          </div>
-        </div>
-
-        <div
-          class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
-          <p>© 2024 Company, Inc. All rights reserved.</p>
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg
-                  class="bi" width="24" height="24"><use
-                    xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg
-                  class="bi" width="24" height="24"><use
-                    xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg
-                  class="bi" width="24" height="24"><use
-                    xlink:href="#facebook"></use></svg></a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <div class="footer"></div>
   </body>
 </html>
