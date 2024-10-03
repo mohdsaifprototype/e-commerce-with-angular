@@ -165,3 +165,11 @@ angular.module('myApp').controller('SectionController', ['$scope', function($sco
     }
   ];
 }]);
+
+angular.module('myApp').controller('CartController', ['$scope', function($scope) {
+  $scope.cartCount = 0;
+
+  $scope.addToCart = function() {
+    $scope.cartCount++;
+  };
+}]);

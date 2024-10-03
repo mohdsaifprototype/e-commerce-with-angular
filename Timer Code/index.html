@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="timer-content d-grid mt-5"
+      style="gap: 10px; grid-template-columns: auto auto auto auto"
+    >
+      <div class="bg-timer d-flex flex-column" style="align-items: center">
+        <div class="bg-time d-flex justify-content-center" >
+          <div class="h3 timerValue" style="margin: 0">01</div>
+        </div>
+        <div class="date-hours">
+          <div class="h5">Days</div>
+        </div>
+      </div>
+      <div class="bg-timer d-flex flex-column" style="align-items: center">
+        <div class="bg-time d-flex justify-content-center" >
+          <div class="timerValue h3 m-0" id="">01</div>
+        </div>
+        <div class="date-hours">
+          <div class="h5 m-0">Hours</div>
+        </div>
+      </div>
+      <div class="bg-timer d-flex flex-column" style="align-items: center">
+        <div class="bg-time d-flex justify-content-center">
+          <div class="timerValue h3 m-0" id="">01</div>
+        </div>
+        <div class="date-hours">
+          <div class="h5">Minutes</div>
+        </div>
+      </div>
+      <div class="bg-timer d-flex flex-column" style="align-items: center">
+        <div class="bg-time d-flex justify-content-center" >
+          <div class="timerValue h3 m-0" id="">01</div>
+        </div>
+        <div class="date-hours">
+          <div class="h5">Seconds</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let endingDAte = "15 November 2024 7:00 PM";
+      let timerValue = document.querySelectorAll(".timerValue");
+      function Timer() {
+        let ending = new Date(endingDAte);
+        let now = new Date();
+        let difference = (ending - now) / 1000;
+        timerValue[0].innerHTML = Math.floor(difference / 3600 / 24);
+        timerValue[1].innerHTML = Math.floor(difference / 3600) % 24;
+        timerValue[2].innerHTML = Math.floor(difference / 60) % 60;
+        timerValue[3].innerHTML = Math.floor(difference) % 60;
+      }
+      Timer();
+      setInterval(() => {
+        Timer();
+      }, 1000);
+    </script>
+  </body>
+</html>

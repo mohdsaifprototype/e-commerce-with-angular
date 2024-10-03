@@ -168,6 +168,13 @@ body {
     width: 135px;
     height: 122px;
   }
+  .text-fs {
+    font-size: 14px;
+  }
+  .cardValue {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 }
 
 .rating-color {
@@ -180,4 +187,52 @@ body {
 
 .gap-bottom {
   margin-bottom: 80px;
+}
+
+.icon-delivery::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  background-color: grey;
+  z-index: -1;
+}
+.icon-delivery {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+}
+
+.threeCards {
+  margin-top: 140px;
+  margin-bottom: 140px;
+}
+
+.section-text{
+  top: 69px;
+  left: 56px;
+}
+/* .bg-timer::before{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: var(--tertiaryColor);
+  border-radius: 50px;
+  
+} */
+.bg-timer{
+  position: relative;
+  color: #00ff66;
+}
+.timerCat{
+  color: #00ff66
+}
+.timerShop{
+  color: white;
+}
+.timerShop:hover{
+  color: grey;
+  cursor: pointer;
 }
