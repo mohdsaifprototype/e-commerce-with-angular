@@ -175,6 +175,11 @@ body {
     margin-top: 80px;
     margin-bottom: 80px;
   }
+
+  .signup{
+    margin-top: 30px;
+    margin-bottom: 70px;
+  }
 }
 
 .rating-color {
@@ -235,4 +240,54 @@ body {
 .timerShop:hover{
   color: grey;
   cursor: pointer;
+}
+
+.signup{
+  margin-top: 60px;
+  margin-bottom: 140px;
+}
+
+button img {
+  width: 20px;
+}
+
+/* button:hover {
+  opacity: 0.9;
+} */
+
+#message {
+  resize: none;
+}
+
+/* Customize the buttons */
+.btn-danger {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.btn-danger:hover {
+  background-color: #d62c1a;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+}
+
+.team-member h5 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.social-icons a {
+  color: #333;
+}
+
+.social-icons a:hover {
+  color: #007bff;
 }

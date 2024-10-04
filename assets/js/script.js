@@ -178,7 +178,7 @@ footer.append(myFooter);
 let trustCard = document.querySelector(".trustCard");
 let content3 = `     
         <div class="row row-cols-2 row-cols-md-3  ">
-          <div class="col">
+          <div class="col mb-5 mb-md-0 ">
            <div class="card bg-transparent d-flex justify-content-center align-items-center border-0 ">
             <div class="rounded-5  icon-delivery d-flex justify-content-center align-items-center ">
               <img src="assets/img/icon-delivery.png" alt="">
@@ -189,7 +189,7 @@ let content3 = `
             </div>
            </div>
           </div>
-          <div class="col">
+          <div class="col  mb-5 mb-md-0">
            <div class="card bg-transparent d-flex justify-content-center align-items-center border-0 ">
             <div class="rounded-5  icon-delivery d-flex justify-content-center align-items-center ">
               <img  src="assets/img/Icon-Customer service.png" alt="">
@@ -200,7 +200,7 @@ let content3 = `
             </div>
            </div>
           </div>
-          <div class="col mt-3 mt-sm-0">
+          <div class="col ">
            <div class="card bg-transparent d-flex justify-content-center align-items-center border-0 ">
             <div class="rounded-5  icon-delivery d-flex justify-content-center align-items-center ">
               <img src="assets/img/Icon-secure.png" alt="">
@@ -223,6 +223,25 @@ mytrustCard = makeElement(
   content3
 );
 trustCard.append(mytrustCard);
+
+let sale = document.querySelector(".sale");
+let content4 = `   <div
+        class="container-xxl d-flex showAd justify-content-between align-items-center">
+        <div class="d-flex text-center">
+          <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF
+            50%!</span>
+          <span class="ms-2 border-0"><u>ShowNow !</u></span>
+        </div>
+        <span class>English <i class="bi bi-chevron-compact-down"></i> </span>
+      </div>`;
+mySale = makeElement(
+  "section",
+  "container-fluid bg-black text-white",
+  "",
+  "",
+  content4
+);
+sale.append(mySale);
 
 let endingDAte = "15 November 2024 7:00 PM";
 let timerValue = document.querySelectorAll(".timerValue");
