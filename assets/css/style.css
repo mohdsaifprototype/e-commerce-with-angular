@@ -291,3 +291,17 @@ button img {
 .social-icons a:hover {
   color: #007bff;
 }
+
+.btn-lg {
+  font-size: 1rem;
+}
+.main-product-image img {
+  width: 400px;
+  height: auto;
+}
+
+.thumbnail {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+}

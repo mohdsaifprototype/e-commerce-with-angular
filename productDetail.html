@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product details page</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"
+      defer></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/card-controller.js" defer></script>
+    <script src="assets/js/productDetail.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer></script>
+
+  </head>
+  <body ng-app="myApp" ng-controller="CardController">
+    <div class="sale"></div>
+    <div class="header"></div>
+    <div class="container signup mt-5">
+      <div class="row">
+        <!-- Product Images Section -->
+        <div class="col-md-6">
+          <div class="d-flex flex-column align-items-center">
+            <div class="mb-4 main-product-image">
+              <img src="assets/img/gamepad5.png"
+                alt="Main Product Image" id="mainImage" class="img-fluid">
+            </div>
+            <div class="d-flex">
+              <img src="assets/img/gamepad4.png" alt="Thumbnail 1"
+                class="img-thumbnail me-2 thumbnail"
+                onclick="changeImage(this)">
+              <img src="assets/img/gamepad3.png" alt="Thumbnail 2"
+                class="img-thumbnail me-2 thumbnail"
+                onclick="changeImage(this)">
+              <img src="assets/img/gamepad2.png" alt="Thumbnail 3"
+                class="img-thumbnail me-2 thumbnail"
+                onclick="changeImage(this)">
+              <img src="assets/img/gamepad1.png" alt="Thumbnail 4"
+                class="img-thumbnail thumbnail" onclick="changeImage(this)">
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="col-md-6">
+          <h3>Havic HV G-92 Gamepad</h3>
+          <div class="d-flex align-items-center">
+            <span class="badge bg-warning text-dark me-2">★★★★☆</span>
+            <small class="text-muted">(150 Reviews)</small>
+          </div>
+          <p class="text-success mt-1">In Stock</p>
+          <h4>$192.00</h4>
+          <p>PlayStation 5 Controller Skin High quality vinyl with air channel
+            adhesive for easy bubble-free install & mess-free removal. Pressure
+            sensitive.</p>
+
+          <!-- Colour Options -->
+          <div class="mb-3">
+            <label for="colours" class="form-label">Colours:</label>
+            <div>
+              <button class="btn btn-light border me-2"
+                onclick="selectColor('Black')"> <span
+                  class="d-inline-block bg-dark rounded-circle"
+                  style="width: 15px; height: 15px;"></span> </button>
+              <button class="btn btn-light border"
+                onclick="selectColor('White')"> <span
+                  class="d-inline-block bg-white border rounded-circle"
+                  style="width: 15px; height: 15px;"></span> </button>
+            </div>
+          </div>
+
+          <!-- Size Options -->
+          <div class="mb-3">
+            <label for="size" class="form-label">Size:</label>
+            <div>
+              <button class="btn btn-outline-dark me-2">XS</button>
+              <button class="btn btn-outline-dark me-2">S</button>
+              <button class="btn btn-outline-dark me-2">M</button>
+              <button class="btn btn-outline-dark me-2">L</button>
+              <button class="btn btn-outline-dark">XL</button>
+            </div>
+          </div>
+
+          <!-- Quantity and Buy Now -->
+          <div class="d-flex align-items-center mb-3">
+            <button class="btn btn-outline-dark me-2"
+              onclick="changeQuantity(-1)">-</button>
+            <input type="text" value="2" class="form-control text-center"
+              style="width: 50px;" id="quantity" readonly>
+            <button class="btn btn-outline-dark ms-2"
+              onclick="changeQuantity(1)">+</button>
+          </div>
+          <button class="btn btn-danger btn-lg">Buy Now</button>
+          <button class="btn btn-outline-secondary btn-lg ms-3">♥</button>
+
+          <!-- Delivery Info -->
+          <div class="mt-4">
+            <p><strong>Free Delivery</strong> - Enter your postal code for
+              Delivery Availability</p>
+            <p><strong>Return Delivery</strong> - Free 30 Days Delivery Returns.
+              <a href="#">Details</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </body>
+</html>
