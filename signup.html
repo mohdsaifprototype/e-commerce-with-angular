@@ -42,7 +42,8 @@
         </div>
         <div class="col">
           <div
-            class="container d-none justify-content-center align-items-center ">
+            class="container d-flex justify-content-center align-items-center "
+            ng-show="showSignup">
             <div class="card p-4 sign  border-0"
               style="width: 100%; max-width: 400px;">
               <h2 class=" mb-3">Create an account</h2>
@@ -70,12 +71,14 @@
                   up with Google</button>
               </form>
               <p class="text-center mt-3 text-muted">Already have an account? <a
-                  href="login" class="text-primary">Log in</a></p>
+                  href="#" class="text-primary"
+                  ng-click="showSignup = false">Log in</a></p>
             </div>
           </div>
           <div
-            class="container d-flex justify-content-center align-items-center ">
-            <div class="card p-4 login  border-0"
+            class="container d-flex justify-content-center align-items-center "
+            ng-hide="showSignup" id="login">
+            <div class="card p-4   border-0"
               style="width: 100%; max-width: 400px;">
               <h2 class=" mb-3">Log in to Ap studios</h2>
               <p class=" text-muted mb-md-5 mb-4">Enter your details
@@ -90,16 +93,20 @@
                     class="form-control"
                     placeholder="Password" required>
                 </div>
-                <button type="submit" class="btn btn-danger w-100 ">Log
+                <button type="submit" class="btn btn-danger w-100  "
+                  ng-click="showSignup = true">Log
                   in</button>
                 <button type="button"
                   class="btn text-danger w-100 mt-2  border-0">Forget Password
                   ?</button>
+                <p class="text-center mt-3 text-muted">Don't have an account? <a
+                    href="#" ng-click="showSignup = true">Sign up</a></p>
               </form>
             </div>
           </div>
         </div>
       </div>
+
     </section>
     <div class="footer "></div>
   </body>

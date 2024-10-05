@@ -33,6 +33,7 @@
       defer></script>
   </head>
   <body ng-app="myApp" ng-controller="CardController">
+    <div ng-if="showCart" ng-include="'cart.html'"></div>
     <div class="sale"></div>
     <div class="header"></div>
     <div class="container-fluid"><span class="lines rounded"></span></div>
