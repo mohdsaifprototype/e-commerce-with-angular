@@ -49,17 +49,17 @@ let content1 = `
               <div class="offcanvas-body align-items-md-center">
                 <ul class="navbar-nav  justify-content-center flex-grow-1 pe-3">
                   <li class="nav-item p-1 p-md-3 icons ">
-                    <a class="nav-link" href="index copy.html">Home</a>
+                    <a class="nav-link" href="#/!">Home</a>
                   </li>
   
                   <li class="nav-item p-1 p-md-3 icons">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="#!contact">Contact</a>
                   </li>
                   <li class="nav-item p-1 p-md-3 icons">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="#!about">About</a>
                   </li>
                   <li class="nav-item p-1 p-md-3 icons">
-                    <a class="nav-link" href="signup.html">Sign up</a>
+                    <a class="nav-link" href="#!signup">Sign up</a>
                   </li>
                 </ul>
   
@@ -77,9 +77,11 @@ let content1 = `
                     class="btn  rounded-pill ms-md-2  d-none d-sm-block">
                     <i class="fa-regular icons fa-heart"></i>
                   </button>
-                <button type="button" class="btn  rounded-pill ms-md-1 me-md-2 d-none d-sm-block" ">
-                    <a href="cart.html"><i class="bi icons bi-cart3 text-black"></i></a>
-                    <span ng-bind="cartCount"></span>
+                <button type="button" class="btn rounded-pill ms-md-1 me-md-2 cart-btn">
+                    <a href="#!cart" class="cart-link">
+                      <i class="bi icons bi-cart3 text-black"></i>
+                      <span class="cart-count" ng-bind="cartCount"></span>
+                    </a>
                   </button>
                   <a href="#"
                     class="btn  rounded-circle d-none d-sm-block"
@@ -90,6 +92,7 @@ let content1 = `
             </div>
           </div>
         </nav>
+     
 `;
 myHeader = makeElement("div", "container-xxl", "", "", content1);
 header.append(myHeader);
@@ -258,61 +261,16 @@ setInterval(() => {
   Timer();
 }, 1000);
 
-/* 
-// routing Angular.js
-var app = angular.module("myApp", ["ngRoute"]);
-app.config(function ($routeProvider) {
-  $routeProvider
-    .when("/cart", {
-      templateUrl: "cart.html",
-    })
-    .when("/billing", {
-      templateUrl: "billing.html",
-    })
-    .when("/account", {
-      templateUrl: "account.html",
-    })
-    .when("/singup", {
-      templateUrl: "signup.htm",
-    });
-});
- */
-
-// Get the cart icon element
-
-/* // Create a directive for the cart icon
-app.directive("cartIcon", function ($http, $compile) {
-  return {
-    link: function (scope, element) {
-      // Add a click event listener to the cart icon
-      element.on("click", function (event) {
-        // Prevent the default behavior of the anchor tag
-        event.preventDefault();
-        // Load the cart.html template
-        $http.get("cart.html").then(function (response) {
-          // Extract the content of the cart.html template
-          var template = angular.element(response.data);
-          var content = template.find("body").html();
-          // Append the content to the current page
-          angular.element(document.body).append(content);
-        });
-      });
-    },
-  };
-});
- */
-
 // Create a directive for the cart icon
-app.directive("cartIcon", function ($scope) {
+var app = angular.module("myApp", ["ngRoute"]);
+
+app.directive("cartIcon", function () {
   return {
     link: function (scope, element) {
       console.log("Cart icon clicked");
-      // Add a click event listener to the cart icon
       element.on("click", function (event) {
         console.log("Cart icon clicked again");
-        // Prevent the default behavior of the anchor tag
         event.preventDefault();
-        // Toggle the showCart variable
         scope.showCart = true;
         scope.$apply();
       });
@@ -320,7 +278,48 @@ app.directive("cartIcon", function ($scope) {
   };
 });
 
+app.config(function ($routeProvider) {
+  $routeProvider
+    .when("/", {
+      templateUrl: "index copy.html",
+      controller: "HomeController",
+    })
+    .when("/contact", {
+      templateUrl: "contact.html",
+    })
+    .when("/about", {
+      templateUrl: "about.html",
+      controller: "AboutController",
+    })
+    .when("/signup", {
+      templateUrl: "signup.html",
+    })
+    .when("/cart", {
+      templateUrl: "cart.html",
+    })
+    .otherwise({
+      redirectTo: "/",
+    });
+});
 
-angular.module('myApp').controller('CardController', function($scope) {
-  $scope.showSignup = true;
+app.controller("HomeController", function ($scope) {
+  $scope.message = "Welcome to the home page!";
+});
+
+app.controller("AboutController", function ($scope) {
+  $scope.message = "Welcome to the about page!";
+});
+
+app.run(function ($rootScope, $location) {
+  $rootScope.$on("$routeChangeStart", function (event, next, current) {
+    console.log("Route changing to: ", next.templateUrl);
+  });
+});
+
+var myApp = angular.module("myApp", []);
+myApp.controller("CardController", function ($scope) {
+  $scope.cartCount = 0;
+  $scope.addToCart = function () {
+    $scope.cartCount++;
+  };
 });

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ap designer</title>
+    <base href="/" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -23,6 +24,9 @@
     <script
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"
       defer></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"
+      defer></script>
     <script src="assets/js/script.js" defer></script>
     <script src="assets/js/card-controller.js" defer></script>
     <script
@@ -32,10 +36,11 @@
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer></script>
   </head>
-  <body ng-app="myApp" ng-controller="CardController">
+  <body ng-controller="CardController">
     <div ng-if="showCart" ng-include="'cart.html'"></div>
     <div class="sale"></div>
     <div class="header"></div>
+
     <div class="container-fluid"><span class="lines rounded"></span></div>
     <section class="container-xxl">
       <div class="row">
@@ -151,5 +156,6 @@
     <section class="trustCard">
     </section>
     <div class="footer"></div>
+    <div ng-view></div>
   </body>
 </html>
