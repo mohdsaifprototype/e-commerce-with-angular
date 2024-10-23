@@ -1,6 +1,28 @@
 // Create a directive for the cart icon
 var app = angular.module("myApp", ["ngRoute"]);
 
+app.config(function ($routeProvider) {
+  $routeProvider
+    .when("/home", {
+      templateUrl: "index.html",
+    })
+    .when("/contact", {
+      templateUrl: "contact.html",
+    })
+    .when("/about", {
+      templateUrl: "about.html",
+    })
+    .when("/signup", {
+      templateUrl: "signup.html",
+    })
+    .when("/cart", {
+      templateUrl: "cart.html",
+    })
+    .otherwise({
+      redirectTo: "/index.html",
+    });
+});
+
 app.directive("cartIcon", function () {
   return {
     link: function (scope, element) {
@@ -25,48 +47,18 @@ app.directive("cartIcon", function () {
   };
 });
 
-app.config(function ($routeProvider) {
-  $routeProvider
-    .when("/home", {
-      templateUrl: "index.html",
-    })
-    .when("/contact", {
-      templateUrl: "contact.html",
-    })
-    .when("/about", {
-      templateUrl: "about.html",
-    })
-    .when("/signup", {
-      templateUrl: "signup.html",
-    })
-    .when("/cart", {
-      templateUrl: "cart.html",
-    })
-    .otherwise({
-      redirectTo: "/",
-    });
-});
+app.controller("MainController", function ($scope, $location) {
+  // Function to check if the current route is the home route
 
-// Controllers
-app.controller("HomeController", function ($scope) {
-  $scope.message = "Welcome to the home page!";
-});
+  $scope.isHomeVisible = function () {
+    return $location.path() === "/home";
+  };
 
-app.controller("AboutController", function ($scope) {
-  $scope.message = "Welcome to the about page!";
-});
+  // Watch for changes in the route
 
-app.run(function ($rootScope) {
-  $rootScope.$on("$routeChangeStart", function (event, next) {
-    console.log("Route changing to: ", next.templateUrl);
+  $scope.$on("$routeChangeSuccess", function () {
+    $scope.isHomeVisible = $scope.isHomeVisible();
   });
 });
 
-/* var myApp = angular.module("myApp", []);
-myApp.controller("CardController", function ($scope) {
-  $scope.cartCount = 0;
-  $scope.addToCart = function () {
-    $scope.cartCount++;
-  };
-});
- */
+
