@@ -5,6 +5,7 @@ app.config(function ($routeProvider) {
   $routeProvider
     .when("/home", {
       templateUrl: "index.html",
+      controller: "HomeController", // Ensure the home controller is set
     })
     .when("/contact", {
       templateUrl: "contact.html",
@@ -19,10 +20,9 @@ app.config(function ($routeProvider) {
       templateUrl: "cart.html",
     })
     .otherwise({
-      redirectTo: "/index.html",
+      redirectTo: "/home", // Redirect to home by default
     });
 });
-
 app.directive("cartIcon", function () {
   return {
     link: function (scope, element) {
@@ -48,17 +48,19 @@ app.directive("cartIcon", function () {
 });
 
 app.controller("MainController", function ($scope, $location) {
+  // Initialize the visibility of homeItems
+
+  $scope.isHomeVisible = true; // Show homeItems by default
+
   // Function to check if the current route is the home route
 
-  $scope.isHomeVisible = function () {
-    return $location.path() === "/home";
+  $scope.checkHomeVisibility = function () {
+    $scope.isHomeVisible = $location.path() === "/home";
   };
 
   // Watch for changes in the route
 
   $scope.$on("$routeChangeSuccess", function () {
-    $scope.isHomeVisible = $scope.isHomeVisible();
+    $scope.checkHomeVisibility();
   });
 });
-
-
