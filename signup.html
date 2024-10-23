@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,7 +32,7 @@
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer></script>
   </head>
-  <body  ng-controller="CardController">
+  <body>
     <div class="sale"></div>
     <div class="header"></div>
     <section class="container-xxl signup">
@@ -70,9 +70,10 @@
                     class="me-2"> Sign
                   up with Google</button>
               </form>
-              <p class="text-center mt-3 text-muted">Already have an account? <a
-                  href="#" class="text-primary"
-                  ng-click="showSignup = false">Log in</a></p>
+              <p class="text-center mt-3 text-muted">Already have an account?
+                <span
+                  class="text-primary"
+                  ng-click="showSignup = false">Log in</span></p>
             </div>
           </div>
           <div
@@ -99,8 +100,10 @@
                 <button type="button"
                   class="btn text-danger w-100 mt-2  border-0">Forget Password
                   ?</button>
-                <p class="text-center mt-3 text-muted">Don't have an account? <a
-                    href="#" ng-click="showSignup = true">Sign up</a></p>
+                <p class="text-center mt-3 text-muted">Don't have an account?
+                  <span
+                  class="text-primary"
+                    ng-click="showSignup = true">Sign up</span></p>
               </form>
             </div>
           </div>

@@ -13,7 +13,7 @@ app.config(function ($routeProvider) {
     .when("/about", {
       templateUrl: "about.html",
     })
-    .when("/signup", {
+    .when("/sp", {
       templateUrl: "signup.html",
     })
     .when("/cart", {
