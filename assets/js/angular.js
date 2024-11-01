@@ -3,10 +3,6 @@ var app = angular.module("myApp", ["ngRoute"]);
 
 app.config(function ($routeProvider) {
   $routeProvider
-    .when("/home", {
-      templateUrl: "index.html",
-      controller: "HomeController", // Ensure the home controller is set
-    })
     .when("/contact", {
       templateUrl: "contact.html",
     })
@@ -18,6 +14,12 @@ app.config(function ($routeProvider) {
     })
     .when("/cart", {
       templateUrl: "cart.html",
+    })
+    .when("/billing", {
+      templateUrl: "billing.html",
+    })
+    .when("/userLogin", {
+      templateUrl: "account.html",
     })
     .otherwise({
       redirectTo: "/home", // Redirect to home by default

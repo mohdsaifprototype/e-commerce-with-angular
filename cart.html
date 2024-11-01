@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" >
+<html lang="en" ng-app="myApp">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,7 +33,7 @@
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
       defer></script>
   </head>
-  <body >
+  <body>
 
     <div class="container-xxl mt-2 mt-md-5">
       <h6><span class="text-secondary">Home</span> / Cart</h6>
@@ -41,72 +41,80 @@
     <div class="container signup mt-5">
       <h4>Cart</h4>
       <div class="row">
-          <!-- Cart Items Section -->
-          <div class="col-md-8">
-              <table class="table">
-                  <thead>
-                      <tr>
-                          <th scope="col">Product</th>
-                          <th scope="col">Price</th>
-                          <th scope="col">Quantity</th>
-                          <th scope="col">Subtotal</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr>
-                          <td>
-                              <img src="assets/img/monitor.png" alt="LCD Monitor" width="50">
-                              LCD Monitor
-                          </td>
-                          <td>$650</td>
-                          <td>
-                              <input type="number" class="form-control w-50" id="quantity1" value="1" min="1">
-                          </td>
-                          <td id="subtotal1">$650</td>
-                      </tr>
-                      <tr>
-                          <td>
-                              <img src="assets/img/gamepad black.png" alt="HI Gamepad" width="50">
-                              HI Gamepad
-                          </td>
-                          <td>$550</td>
-                          <td>
-                              <input type="number" class="form-control w-50" id="quantity2" value="2" min="1">
-                          </td>
-                          <td id="subtotal2">$1100</td>
-                      </tr>
-                  </tbody>
-              </table>
-              <button class="btn btn-outline-dark" onclick="window.location.href='shop.html'">Return to Shop</button>
-              <button class="btn btn-outline-dark float-right" id="updateCart">Update Cart</button>
-          </div>
+        <!-- Cart Items Section -->
+        <div class="col-md-8">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <img src="assets/img/monitor.png" alt="LCD Monitor"
+                    width="50">
+                  LCD Monitor
+                </td>
+                <td>$650</td>
+                <td>
+                  <input type="number" class="form-control w-50" id="quantity1"
+                    value="1" min="1">
+                </td>
+                <td id="subtotal1">$650</td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="assets/img/gamepad black.png" alt="HI Gamepad"
+                    width="50">
+                  HI Gamepad
+                </td>
+                <td>$550</td>
+                <td>
+                  <input type="number" class="form-control w-50" id="quantity2"
+                    value="2" min="1">
+                </td>
+                <td id="subtotal2">$1100</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-outline-dark"
+            onclick="window.location.href='shop.html'">Return to Shop</button>
+          <button class="btn btn-outline-dark float-right"
+            id="updateCart">Update Cart</button>
+        </div>
 
-          <!-- Cart Total Section -->
-          <div class="col-md-4">
-              <div class="border p-3">
-                  <h5>Cart Total</h5>
-                  <p>Subtotal: <span id="cartSubtotal">$1750</span></p>
-                  <p>Shipping: Free</p>
-                  <p>Total: <span id="cartTotal">$1750</span></p>
-                  <button class="btn btn-danger btn-block">Proceed to Checkout</button>
-              </div>
+        <!-- Cart Total Section -->
+        <div class="col-md-4">
+          <div class="border p-3">
+            <h5>Cart Total</h5>
+            <p>Subtotal: <span id="cartSubtotal">$1750</span></p>
+            <p>Shipping: Free</p>
+            <p>Total: <span id="cartTotal">$1750</span></p>
+            <a href="#!/billing"> <button
+                class="btn btn-danger btn-block">Proceed to
+                Checkout</button></a>
           </div>
+        </div>
       </div>
 
       <!-- Coupon Section -->
       <div class="row mt-4">
-          <div class="col-md-8">
-              <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Coupon Code" id="couponCode">
-                  <div class="input-group-append">
-                      <button class="btn btn-danger" id="applyCoupon">Apply Coupon</button>
-                  </div>
-              </div>
+        <div class="col-md-8">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Coupon Code"
+              id="couponCode">
+            <div class="input-group-append">
+              <button class="btn btn-danger" id="applyCoupon">Apply
+                Coupon</button>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
-
-    
+    </div>
 
   </body>
 </html>
