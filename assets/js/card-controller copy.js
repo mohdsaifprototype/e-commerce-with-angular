@@ -125,6 +125,7 @@ const generateCard = [
   },
 ];
 // Function to generate HTML for cards
+// Function to generate HTML for cards
 function generateCards(cards) {
   return cards
     .map((card) => {
@@ -134,12 +135,10 @@ function generateCards(cards) {
         0
       );
       const averageRating = totalRatings / card.ratings.length;
-      // Debugging: log the average rating
-      console.log(`Average rating for ${card.title}: ${averageRating}`);
       // Determine the number of full, half, and empty stars based on the average rating
-      const fullStars = Math.floor(averageRating); // Full stars
-      const hasHalfStar = averageRating % 1 >= 0.5 ? 1 : 0; // Half star if average is 0.5 or more
-      const emptyStars = 5 - fullStars - hasHalfStar; // Remaining stars are empty
+      const fullStars = Math.floor(averageRating);
+      const hasHalfStar = averageRating % 1 >= 0.5 ? 1 : 0;
+      const emptyStars = 5 - fullStars - hasHalfStar;
       // Determine if the card is new and has a discount
       const isNew = card.new ? '<div class="new">New</div>' : "";
       const discountLabel = card.discount
@@ -148,7 +147,7 @@ function generateCards(cards) {
       const hasLabels = card.discount || card.new;
       const iconAlignment = hasLabels
         ? "justify-content-between"
-        : "justify-content-end"; // Adjust alignment based on labels
+        : "justify-content-end";
       // Generate star icons
       const starsHTML = `
         ${Array.from(
@@ -166,10 +165,11 @@ function generateCards(cards) {
           () => '<span class="rate-no-color"><i class="bi bi-star"></i></span>'
         ).join("")}
       `;
+      // Create the card HTML and set a data attribute
       return `
         <div class="col" style="${
           !hasLabels ? "background-color: #f5f5f5;" : ""
-        }">
+        }" data-card-id="${card.title.replace(/\s+/g, "-").toLowerCase()}">
           <div class="card border-0">
             <div class="position-relative card-img-section d-flex rounded-3 align-items-center justify-content-center overflow-hidden">
               <div class="d-flex card-inner-img-section justify-content-center align-items-center">
@@ -189,7 +189,7 @@ function generateCards(cards) {
                   </div>
                 </div>
               </div>
-              <div class="adToCart bottom-0 rounded-2">Add to cart</div>
+              <div class="adToCart bottom-0 rounded-2" data-title="${card.title}" data-price="${card.price}">Add to cart</div>
             </div>
             <div class="card-body border-0 d-flex flex-column">
               <span class="card-title">${card.title}</span>
@@ -210,14 +210,156 @@ function generateCards(cards) {
         </div>
       `;
     })
-    .join(""); // Join all card HTML strings into one
+    .join("");
 }
+
 // Select all card containers
 const cardContainers = document.querySelectorAll(".card-container");
 // Generate and append cards to the corresponding containers
 generateCard.forEach((card, index) => {
-  const cardHTML = generateCards([card]); // generate HTML for each card
+  const cardHTML = generateCards([card]); // Generate HTML for each card
   if (cardContainers[index]) {
-    cardContainers[index].innerHTML += cardHTML; // append to the corresponding container
+    cardContainers[index].innerHTML += cardHTML; // Append to the corresponding container
   }
 });
+
+// Add event listeners for "Add to cart" buttons
+document.querySelectorAll('.adToCart').forEach(button => {
+  button.addEventListener('click', function() {
+    const title = this.getAttribute('data-title');
+    const price = parseFloat(this.getAttribute('data-price'));
+    
+    // Call the addToCart function with the title and price
+    addToCart(title, price);
+  });
+});
+
+// Function to show notifications
+function showNotification(message) {
+  const notification = document.createElement("div");
+  notification.className = "alert alert-success";
+  notification.innerText = message;
+  document.body.appendChild(notification);
+
+  setTimeout(() => {
+    notification.remove();
+  }, 3000); // Remove notification after 3 seconds
+}
+
+// Function to update the subtotal for a specific row
+function updateSubtotal(row, price) {
+  const quantity = parseInt(row.querySelector("input[type='number']").value);
+  const subtotal = price * quantity;
+  row.querySelector(
+    `#subtotal-${row.getAttribute("data-title").replace(/\s+/g, "-").toLowerCase()}`
+  ).textContent = `$${subtotal.toFixed(2)}`;
+  updateCartTotal(); // Update total after changing subtotal
+}
+
+// Function to update the total amount in the cart
+function updateCartTotal() {
+  const cartTableBody = document.querySelector("tbody");
+  let total = 0;
+
+  cartTableBody.querySelectorAll("tr").forEach((row) => {
+    const subtotal = parseFloat(
+      row.querySelector("td[id^='subtotal']").textContent.replace("$", "")
+    );
+    total += subtotal;
+  });
+
+  document.getElementById("cartSubtotal").textContent = `$${total.toFixed(2)}`;
+  document.getElementById("cartTotal").textContent = `$${total.toFixed(2)}`;
+}
+
+// Function to add items to the cart
+function addToCart(title, price) {
+  const cartTableBody = document.querySelector("tbody");
+
+  // Check if the item is already in the cart
+  const existingRow = cartTableBody.querySelector(`tr[data-title="${title}"]`);
+  if (existingRow) {
+    // If it exists, update the quantity
+    const quantityInput = existingRow.querySelector("input[type='number']");
+    quantityInput.value = parseInt(quantityInput.value) + 1; // Increment quantity
+    updateSubtotal(existingRow, price);
+    showNotification(`${title} quantity updated!`);
+  } else {
+    // Create a new row for the cart
+    const quantity = 1; // Default quantity for new items
+    const subtotal = price * quantity;
+
+    const newRow = document.createElement("tr");
+    newRow.setAttribute("data-title", title);
+    newRow.innerHTML = `
+          <td>
+              <img src="assets/img/${title.replace(/\s+/g, "-").toLowerCase()}.png" alt="${title}" width="50">
+              ${title}
+          </td>
+          <td>$${price}</td>
+          <td>
+              <input type="number" class="form-control w-50" value="${quantity}" min="1">
+          </td>
+          <td id="subtotal-${title.replace(/\s+/g, "-").toLowerCase()}">$${subtotal.toFixed(2)}</td>
+          <td><button class="remove-btn btn btn-danger btn-sm">Remove</button></td>
+      `;
+
+    cartTableBody.appendChild(newRow);
+
+    // Add event listener for the remove button
+    newRow.querySelector(".remove-btn").addEventListener("click", function () {
+      newRow.remove();
+      updateCartTotal();
+      showNotification(`${title} has been removed from your cart.`);
+    });
+
+    showNotification(`${title} has been added to your cart!`);
+  }
+  updateCartTotal();
+}
+
+// Event listener for the checkout button
+document.getElementById("checkoutBtn").addEventListener("click", function () {
+  if (document.querySelector("tbody").children.length === 0) {
+    alert("Your cart is empty!");
+  } else {
+    alert("Thank you for your purchase!");
+    // Clear the cart
+    document.querySelector("tbody").innerHTML = "";
+    updateCartTotal();
+  }
+});
+
+// Event listener for updating cart quantities
+document.getElementById("updateCart").addEventListener("click", function () {
+  const cartTableBody = document.querySelector("tbody");
+  cartTableBody.querySelectorAll("tr").forEach((row) => {
+    const title = row.getAttribute("data-title");
+    const price = parseFloat(
+      row.querySelector("td:nth-child(2)").textContent.replace("$", "")
+    );
+    updateSubtotal(row, price);
+  });
+});
+
+// Coupon application
+document.getElementById("applyCoupon").addEventListener("click", function () {
+  const couponCode = document.getElementById("couponCode").value;
+  let cartTotal = parseFloat(
+    document.getElementById("cartTotal").textContent.replace("$", "")
+  );
+
+  if (couponCode === "DISCOUNT10") {
+    const discount = cartTotal * 0.1; // 10% discount
+    const newTotal = cartTotal - discount;
+
+    // Update total with discount
+    document.getElementById("cartTotal").textContent = `$${newTotal.toFixed(2)}`;
+    alert("Coupon applied! 10% discount has been applied.");
+  } else {
+    alert("Invalid coupon code.");
+  }
+});
+
+// Initial call to update cart total in case the cart is pre-filled
+updateCartTotal();
